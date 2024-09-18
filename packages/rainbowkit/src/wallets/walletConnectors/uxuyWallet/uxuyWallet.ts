@@ -40,7 +40,7 @@ export const uxuyWallet = ({
 
   return {
     id: 'uxuy',
-    name: 'uxuy',
+    name: 'UXUY Wallet',
     rdns: 'io.uxuy',
     iconUrl: async () => (await import('./uxuyWallet.svg')).default,
     iconAccent: '#f6851a',
