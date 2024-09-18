@@ -1,4 +1,7 @@
 {
   "eslint.packageManager": "pnpm",
-  "npm.packageManager": "pnpm"
+  "npm.packageManager": "pnpm",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit"
+  }
 }

@@ -23,8 +23,8 @@ const getAllEntryPoints = async (rootPath) =>
     );
 
 const baseBuildConfig = (onEnd) => {
-  const rainbowProviderApiKey = "111111111111111";
-  console.log(rainbowProviderApiKey)
+  const rainbowProviderApiKey = '111111111111111';
+  console.log(rainbowProviderApiKey);
   if (!rainbowProviderApiKey) {
     throw new Error('missing RAINBOW_PROVIDER_API_KEY env variable');
   }
