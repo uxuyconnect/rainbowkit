@@ -1,5 +1,11 @@
 # @rainbow-me/rainbowkit
 
+## 3.0.0
+
+### Major Changes
+
+- uxuy
+
 ## 2.1.7
 
 ### Patch Changes

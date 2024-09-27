@@ -1,5 +1,11 @@
 # with-next-rainbow-button
 
+## 0.0.26
+
+### Patch Changes
+
+- @rainbow-me/rainbow-button@0.2.17
+
 ## 0.0.25
 
 ### Patch Changes

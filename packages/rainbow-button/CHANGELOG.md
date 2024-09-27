@@ -1,5 +1,12 @@
 # @rainbow-me/rainbow-button
 
+## 0.2.17
+
+### Patch Changes
+
+- Updated dependencies
+  - @rainbow-me/rainbowkit@3.0.0
+
 ## 0.2.16
 
 ### Patch Changes
