@@ -29,15 +29,6 @@ export const uxuyWallet = ({
 
   const shouldUseWalletConnect = false;
 
-  const getUri = (uri: string) => {
-    return isAndroid()
-      ? uri
-      : isIOS()
-        ? // currently broken in MetaMask v6.5.0 https://github.com/MetaMask/metamask-mobile/issues/6457
-          `metamask://wc?uri=${encodeURIComponent(uri)}`
-        : `https://metamask.app.link/wc?uri=${encodeURIComponent(uri)}`;
-  };
-
   return {
     id: 'uxuy',
     name: 'UXUY Wallet',
@@ -47,72 +38,25 @@ export const uxuyWallet = ({
     iconBackground: '#fff',
     installed: !shouldUseWalletConnect ? isUxuyInjected : undefined,
     downloadUrls: {
-      android: 'https://play.google.com/store/apps/details?id=io.metamask',
-      ios: 'https://apps.apple.com/us/app/metamask/id1438144202',
-      mobile: 'https://metamask.io/download',
-      qrCode: 'https://metamask.io/download',
-      chrome:
-        'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn',
-      edge: 'https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm',
-      firefox: 'https://addons.mozilla.org/firefox/addon/ether-metamask',
-      opera: 'https://addons.opera.com/extensions/details/metamask-10',
-      browserExtension: 'https://metamask.io/download',
+      android: 'https://download.uxuy.com/v0.1/uxuy-release.apk',
+      ios: 'https://uxuy.com/download',
+      mobile: 'https://uxuy.com/download',
+      qrCode: 'https://uxuy.com/download',
+      chrome: '',
+      edge: '',
+      firefox: '',
+      opera: '',
+      browserExtension: '',
     },
 
     mobile: {
-      getUri: shouldUseWalletConnect ? getUri : undefined,
+      getUri: undefined,
     },
-    qrCode: shouldUseWalletConnect
-      ? {
-          getUri,
-          instructions: {
-            learnMoreUrl: 'https://metamask.io/faqs/',
-            steps: [
-              {
-                description:
-                  'wallet_connectors.metamask.qr_code.step1.description',
-                step: 'install',
-                title: 'wallet_connectors.metamask.qr_code.step1.title',
-              },
-              {
-                description:
-                  'wallet_connectors.metamask.qr_code.step2.description',
-                step: 'create',
-                title: 'wallet_connectors.metamask.qr_code.step2.title',
-              },
-              {
-                description:
-                  'wallet_connectors.metamask.qr_code.step3.description',
-                step: 'refresh',
-                title: 'wallet_connectors.metamask.qr_code.step3.title',
-              },
-            ],
-          },
-        }
-      : undefined,
+    qrCode: undefined,
     extension: {
       instructions: {
-        learnMoreUrl: 'https://metamask.io/faqs/',
-        steps: [
-          {
-            description:
-              'wallet_connectors.metamask.extension.step1.description',
-            step: 'install',
-            title: 'wallet_connectors.metamask.extension.step1.title',
-          },
-          {
-            description:
-              'wallet_connectors.metamask.extension.step2.description',
-            step: 'create',
-            title: 'wallet_connectors.metamask.extension.step2.title',
-          },
-          {
-            description:
-              'wallet_connectors.metamask.extension.step3.description',
-            step: 'refresh',
-            title: 'wallet_connectors.metamask.extension.step3.title',
-          },
-        ],
+        learnMoreUrl: 'https://uxuy.com',
+        steps: [],
       },
     },
     createConnector: (walletDetails: WalletDetailsParams) => {
